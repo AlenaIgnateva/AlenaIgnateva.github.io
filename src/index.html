@@ -9,29 +9,35 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <div class="spinner">
+        <div class="ring"></div>
+        <span>Loading...</span>
+    </div>
     <header>
         <nav>
-           <div class="logo">Алёна Игнатьева</div> 
+           <div class="logo" >Алёна Игнатьева</div> 
            <div class="menu">
-               <div class="menu_item">Обо мне</div>
-               <div class="menu_item">Услуги</div>
-               <div class="menu_item">Кейсы</div>
-               <div class="menu_item">Прайс</div>
-               <div class="menu_item">Отзывы</div>
-               <div class="menu_item">Контакты</div>
+               <div class="menu_item" id="menu_item1"><a href="#">Обо мне</a></div>
+               <div class="menu_item" id="menu_item2"><a href="#">Услуги</a></div>
+               <div class="menu_item" id="menu_item3"><a href="#">Кейсы</a></div>
+               <div class="menu_item" id="menu_item4"><a href="#">Прайс</a></div>
+               <div class="menu_item" id="menu_item5"><a href="#">Отзывы</a></div>
+               <div class="menu_item" id="menu_item6"><a href="#">Контакты</a></div>
            </div>
         </nav>       
     </header>
     
-    <div class="main">
-        <div class="title_conteiner">
-            <h1>Привет <br>Я Алёна Игнатьева</h1>
-            <h4>Фулл стек веб-разработчик</h4>
-            <input type="submit" value="Обо мне">
-            <input type="submit" value="Мои работы">
-        </div>
-    </div>
+    <main>
+    <section class="main">
+            <div class="title_conteiner" >
+                <h1>Привет <br>Я Алёна Игнатьева</h1>
+                <h4>Фулл стек веб-разработчик</h4>
+                <input type="button" value="Обо мне">
+                <input type="button" value="Мои работы">
+            </div>
+    </section>
     
     <div class="about_me">
     <div class="about_me_conteiner">
@@ -45,7 +51,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, magni, maxime. Doloremque est aliquid reprihemde vitae perferendis esse nam soluta ullam expedita, distinctio rem?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, magni, maxime. Doloremque est aliquid reprihemde vitae perferendis esse nam soluta ullam expedita, distinctio rem?</p>
         </div>
-        <input type="submit" value="Cкачать резюме">
+        <input type="button" value="Cкачать резюме">
     </div>
     </div>
     
@@ -54,22 +60,22 @@
         <h3>ЧТО Я УМЕЮ</h3>
         <img src="img\Черта заголовка.png" alt="-----">
         <div class="all_skills">
-            <div class="skills">
+            <div class="skills sk1">
                 <img src="img\ноут.png" alt="Изображение">
                 <h5>Веб-дизайн</h5>
                 <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, doloribus.</p>
             </div>
-            <div class="skills" centr_thing1="1">
+            <div class="skills sk2" centr_thing1="1">
                 <img src="img\знак.png" alt="Изображение">
                 <h5>Разработка</h5>
-                <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatibus.</p>
+                <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatibus</p>
             </div>
-            <div class="skills" centr_thing1="2">
+            <div class="skills sk3" centr_thing1="2">
                <img src="img\ракета.png" alt="Изображение">
                 <h5>CEO-оптимизация</h5>
                 <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, nisi.</p>
             </div>
-            <div class="skills">
+            <div class="skills sk4">
                <img src="img\граммофон.png" alt="Изображение">
                 <h5>Маркетинг</h5>
                 <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, exercitationem!</p>
@@ -88,7 +94,7 @@
           <div class="case_inf">
               <h5>CLIENT:</h5><p>Какая-то компания</p>     
               <h5>WEBSITE:</h5><p>http://www.somedomain.com</p> 
-              <input type="submit" value="VISIT LIVE SITE">
+              <input type="button" value="VISIT LIVE SITE">
           </div>
           <div class="name_project">
               <h5>Название проекта</h5>
@@ -132,7 +138,8 @@
     </div>
     
     <div class="statistics">
-       <div class="statistics_conteiner">
+      <div class="parallax_layer parallax_back"><img src="img/фон4.jpg" alt="Фон"></div>
+       <div class="statistics_conteiner parallax_layer parallax_base">
         <h3>НЕМНОГО СТАТИСТИКИ</h3>
         <img src="img\Черта заголовка.png" alt="-----">
         <div class="blocks">
@@ -209,8 +216,10 @@
         <p>Честно, тут когда-нибудь будет карта</p>
     </div>
     
+    
     <footer>
         <p>Copyright©2022 Алёна Игнатьева. Desining by Web</p>
     </footer>
+    </main>
 </body>
 </html>

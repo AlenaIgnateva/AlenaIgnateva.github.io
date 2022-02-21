@@ -1,22 +1,132 @@
 body{
     font-family: Arial,sans-serif;
+    -webkit-animation: no_skroll 3.5s ease forwards;
+    -o-animation: no_skroll 3.5s ease forwards ;
+    animation: no_skroll 3.5s ease forwards ;
+    
 }
+
+@keyframes no_skroll{
+    from{
+        overflow-y: hidden;
+    }
+    to{
+        overflow-y: scroll;
+    }
+}
+
+.spinner{
+    position: absolute;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #2b3544;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: load 2s ease forwards 1.5s;
+    -o-animation: load 2s ease forwards 1.5s;
+    animation: load 2s ease forwards 1.5s;
+    z-index: 10;
+}
+
+.ring{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+}
+@keyframes ring{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #eb8908;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #689eeb;
+    }
+}
+.ring:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(255,255,255,.3);
+    border-radius: 50%;
+}
+
+span{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 200px;
+    animation: text 3s ease-in-out infinite;
+}
+
+@keyframes text{
+    50%{
+        color: #2b3544;
+    }
+}
+
+@keyframes load{
+    from{
+        top: 0px;
+        opacity: 1;
+    }
+    
+    to{
+        top: -1000px;
+        opacity: 0;
+    }
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 nav{
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
+    z-index: 1;
 }
 
 .logo{
     font-size: 28px;
+    opacity: 0;
     color: #fff;
     line-height: 60px;
     float: left;
     padding-left: 388px;
+    -webkit-animation: comming 3s ease forwards 2.5s;
+    -o-animation : comming 3s ease forwards 2.5s;
+    animation: comming 3s ease forwards 2.5s;
 }
 
-.menu{
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.menu {
     float: left;
     padding-left: 352px;
 }
@@ -28,18 +138,87 @@ nav{
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: top_comming 2s ease forwards ;
+    -o-animation: top_comming 2s ease forwards ;
+    animation: top_comming 2s ease forwards ;
+    opacity: 0;
+}
+
+@keyframes top_comming{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+#menu_item1{
+    animation-delay: 2.4s;
+}
+#menu_item2{
+    animation-delay: 2.8s;
+}
+#menu_item3{
+    animation-delay: 3.2s;
+}
+#menu_item4{
+    animation-delay: 3.6s;
+}
+#menu_item5{
+    animation-delay: 4s;
+}
+#menu_item6{
+    animation-delay: 4.4s;
+}
+
+.menu a{
+    transition: all 0.1s;
+    transform: scale(1);
+    display: inline-block;
+}
+.menu a:visited{
+    color: white;
+}
+.menu a:hover{
+    color: #d17700;
+}
+.menu a:active{
+    transform: scale(1.1);
 }
 
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100% ;
     background: url(../img/dog.png) 90% 106%/auto 85% no-repeat ,url(../img/фон.jpg) 0px 0px/100% 98.5% no-repeat;
 }
 
 .title_conteiner{
     margin: 432px 0px 0px 404px;
+    opacity: 0;
     float: left;
     text-align: center;
+    -webkit-animation: title_anim 1s ease forwards 3.5s;
+    -o-animation: title_anim 1s ease forwards 3.5s;
+    animation: title_anim 1s ease forwards 3.5s;
+} 
+
+@keyframes title_anim{
+    0%{
+        margin-left: -500px;
+    }
+    61%{
+        margin-left: 419px;
+    }
+    87%{
+        margin-left: 389px;
+    }
+    100%{
+        opacity: 1;
+        margin-left: 404px;
+    }
 }
 
 .title_conteiner h1{
@@ -64,6 +243,18 @@ nav{
     padding: 0px 16px;
     margin: 50px 14px 0px 14px; 
     color: #6d7682;
+}
+
+.title_conteiner input{
+    transition: all 0.15s;
+    transform: scale(1);
+}
+.title_conteiner input:hover{
+    background: #344051;
+    color: white;
+}
+.title_conteiner input:active{
+    transform: scale(1.1);
 }
 
 .about_me{
@@ -109,6 +300,14 @@ h3{
     border-radius: 5px;
     font-size: 13px;
     color: #6f707e;
+    transition: all 0.1s;
+}
+.about_me_conteiner input:hover{
+    background: url(../img/скачка.png) 11px 7px/auto no-repeat, #d17700;
+    color: white;
+}
+.about_me_conteiner input:active{
+     transform: scale(1.1);
 }
 
 .my_skills{
@@ -138,6 +337,45 @@ h3{
 }
 [centr_thing1="2"]{
     margin: 0px 80px 0px 40px;
+}
+
+.my_skills:hover .sk1{
+    -webkit-animation: jump 0.6s ease forwards;
+    -o-animation: jump 0.6s ease forwards;
+    animation: jump 0.6s ease forwards;
+}
+.my_skills:hover .sk2{
+    -webkit-animation: jump 0.6s ease forwards 0.6s;
+    -o-animation: jump 0.6s ease forwards 0.6s;
+    animation: jump 0.6s ease forwards 0.6s;
+}
+.my_skills:hover .sk3{
+    -webkit-animation: jump 0.6s ease forwards 1.2s;
+    -o-animation: jump 0.6s ease forwards 1.2s;
+    animation: jump 0.6s ease forwards 1.2s;
+}
+.my_skills:hover .sk4{
+    -webkit-animation: jump 0.6s ease forwards 1.8s;
+    -o-animation: jump 0.6s ease forwards 1.8s;
+    animation: jump 0.6s ease forwards 1.8s;
+}
+
+@keyframes jump{
+    0%{
+        margin-top: 0px;
+    }
+    40%{
+        margin-top: -40px;
+    }
+    80%{
+        margin-top: 0px;
+    }
+    90%{
+        margin-top: -10px;
+    }
+    100%{
+        margin-top: 0px;
+    }
 }
 
 .skills h5{
@@ -218,6 +456,13 @@ h3{
     font-size: 17px;
     color: #fff;
     font-weight: 550;
+    transition: all 0.1s;  
+}
+.case_inf input:hover{
+    background: #d17700;
+}
+.case_inf input:active{
+    transform: scale(1.1);
 }
 
 .calc{
@@ -266,13 +511,33 @@ h3{
     font-size: 15px;
 }
 
+/*ПОПЫТКИ СДЕЛАТЬ ПАРАЛЛАКС*/
 .statistics{
-    height: 498px;
-    background: url(../img/фон4.jpg) 0px 0px/100%  no-repeat;
+    height: 499px;
+    width: 100%;
+    position: relative;
+    perspective: 1px;
+    overflow-x: hidden;
+
 }
+.parallax_layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax_base {
+  transform: translateZ(0);
+}
+.parallax_back {
+  transform: translateZ(-9px) scale(10);
+}
+/**/
 .statistics_conteiner{
-    margin: 104px 0px 0px 440px;
-    float:left;
+    top: 104px;
+    left: 440px;
+    position: absolute;
     width: 1024px;
     text-align: center;
 }
@@ -291,6 +556,10 @@ h3{
 
 [centr_thing2="2"]{
     margin: 0px 142px 0px 71px;
+}
+
+.sk1{
+    
 }
 
 .number{
@@ -313,6 +582,8 @@ h3{
 
 .reviews{
     height: 592px;
+    width: 100%;
+    float: left;
     background:  url(../img/фон5.jpg) 0px 0px/100%  no-repeat;
 }
 
@@ -343,13 +614,14 @@ h3{
 }
 
 .feedback{
-    height: 800px;
-    background: url(../img/фон6.jpg) 0px 0px/100%  no-repeat;
+    height: 808px;
+    width: 100%;
+    float: left;
+    background:  url(../img/фон6.jpg) 0px 0px/100%  no-repeat;
 }
 
 .feedback_conteiner{
     margin: 105px 0px 0px 592px;
-    float: left;
     text-align: center;
     width: 734px;
     color: #fff; 
@@ -403,6 +675,15 @@ h3{
     width: 100%;
 }
 
+.inp_text input:focus{
+    transform: scale(1.02);
+    box-shadow: 1px 2px 10px #fff;
+}
+textarea:focus{
+    transform: scale(1.02);
+    box-shadow: 1px 2px 5px #fff;
+}
+
 .inp_text input{
     width: 351px;
     height: 35px;
@@ -432,11 +713,19 @@ form>input{
     font-size: 20px;
     color: #fff;
     font-stretch:condensed ;
+    transition: all 0.1;
+}
+form>input:hover{
+    background: #d17700;
+}
+form>input:active{
+    transform: scale(1.1);
 }
 
 .map{
     height: 350px;
     font-size: 30px;
+    float: left;
 }
 
 .map p{
@@ -448,7 +737,9 @@ form>input{
 
 footer{
     height: 96px;
+    width: 100%;
     background: #354051;
+    float: left;
 }
 
 footer p{
