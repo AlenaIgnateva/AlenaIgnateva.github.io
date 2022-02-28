@@ -7,7 +7,9 @@
     <meta name="robots" content="all">
     <title>Алёна - Веб-разработчик</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -15,31 +17,66 @@
         <div class="ring"></div>
         <span>Loading...</span>
     </div>
+    
     <header>
         <nav>
-           <div class="logo" >Алёна Игнатьева</div> 
-           <div class="menu">
-               <div class="menu_item" id="menu_item1"><a href="#">Обо мне</a></div>
-               <div class="menu_item" id="menu_item2"><a href="#">Услуги</a></div>
-               <div class="menu_item" id="menu_item3"><a href="#">Кейсы</a></div>
-               <div class="menu_item" id="menu_item4"><a href="#">Прайс</a></div>
-               <div class="menu_item" id="menu_item5"><a href="#">Отзывы</a></div>
-               <div class="menu_item" id="menu_item6"><a href="#">Контакты</a></div>
-           </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-xxl-3 col-xl-3 col-lg-3 col-8"><div class="logo" >Алёна Игнатьева</div> </div>
+                  <div class="col-xxl-6 col-xl-7 col-lg-8 offset-xxl-3 offset-xl-2 offset-lg-1 d-none d-lg-block">
+                      <div class="menu">
+                           <div class="menu_item" id="menu_item1"><a href="#">Обо мне</a></div>
+                           <div class="menu_item" id="menu_item2"><a href="#">Услуги</a></div>
+                           <div class="menu_item" id="menu_item3"><a href="#">Кейсы</a></div>
+                           <div class="menu_item" id="menu_item4"><a href="#">Прайс</a></div>
+                           <div class="menu_item" id="menu_item5"><a href="#">Отзывы</a></div>
+                           <div class="menu_item" id="menu_item6"><a href="#">Контакты</a></div>
+                       </div>
+                  </div>
+                  <div class=" col-4 d-flex d-lg-none flex-column justify-content-center
+                     align-items-end">
+                      <div class="dropdown">
+  <a class="btn btn-outline-secondary dropdown-toggle nav_btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    Навигация
+  </a>
+
+  <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="#">Обо мне</a></li>
+    <li><a class="dropdown-item" href="#">Услуги</a></li>
+    <li><a class="dropdown-item" href="#">Кейсы</a></li>
+    <li><a class="dropdown-item" href="#">Прайс</a></li>
+    <li><a class="dropdown-item" href="#">Отзывы</a></li>
+    <li><a class="dropdown-item" href="#">Контакты</a></li>
+  </ul>
+</div>
+                  </div>
+              </div>
+          </div>
+           
+           
         </nav>       
     </header>
     
     <main>
     <section class="main">
-            <div class="title_conteiner" >
-                <h1>Привет <br>Я Алёна Игнатьева</h1>
-                <h4>Фулл стек веб-разработчик</h4>
-                <input type="button" value="Обо мне">
-                <input type="button" value="Мои работы">
-            </div>
+          
+           <div class="container h-100">
+               <div class="row align-items-center h-100">
+                 <div class="col-lg-6 col-12 mt-5 pt-5">
+                   <div class="title_conteiner mt-5" >
+                        <h1>Привет <br>Я Алёна Игнатьева</h1>
+                        <h4>Фулл стек веб-разработчик</h4>
+                        <input type="button" value="Обо мне">
+                        <input type="button" value="Мои работы">
+                    </div>
+               </div>
+               
+               </div></div>
+            
     </section>
     
-    <div class="about_me">
+    <section class="about_me">
+
     <div class="about_me_conteiner">
        <div>
            <h3>ОБО МНЕ</h3>
@@ -53,48 +90,48 @@
         </div>
         <input type="button" value="Cкачать резюме">
     </div>
-    </div>
+    </section>
     
-    <div class="my_skills">
+    <section class="my_skills">
     <div class="my_skills_conteiner">
         <h3>ЧТО Я УМЕЮ</h3>
         <img src="img\Черта заголовка.png" alt="-----">
         <div class="all_skills">
-            <div class="skills sk1">
+            <div class="skills sk1" id="sk1">
                 <img src="img\ноут.png" alt="Изображение">
                 <h5>Веб-дизайн</h5>
                 <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, doloribus.</p>
             </div>
-            <div class="skills sk2" centr_thing1="1">
+            <div class="skills sk2" id="sk2">
                 <img src="img\знак.png" alt="Изображение">
                 <h5>Разработка</h5>
                 <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, voluptatibus</p>
             </div>
-            <div class="skills sk3" centr_thing1="2">
+            <div class="skills sk3" id="sk3">
                <img src="img\ракета.png" alt="Изображение">
                 <h5>CEO-оптимизация</h5>
                 <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, nisi.</p>
             </div>
-            <div class="skills sk4">
+            <div class="skills sk4" id="sk4">
                <img src="img\граммофон.png" alt="Изображение">
                 <h5>Маркетинг</h5>
                 <p class="text_skils">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, exercitationem!</p>
             </div>
         </div>
     </div>
-    </div>
+    </section>
     
-    <div class="case">
+    <section class="case">
     <div class="case_conteiner">
       <h3>КЕЙСЫ</h3>
       <img src="img\Черта заголовка.png" alt="-----">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae officiis, alias hic neque aliquid odit.</p>
-
+           <img src="img\кейс.png" alt="Изображение">
       <div class="case_footer">
           <div class="case_inf">
-              <h5>CLIENT:</h5><p>Какая-то компания</p>     
-              <h5>WEBSITE:</h5><p>http://www.somedomain.com</p> 
-              <input type="button" value="VISIT LIVE SITE">
+              <div class="infa"><h5>CLIENT:</h5><p>Какая-то компания</p></div>     
+              <div class="infa "><h5>WEBSITE:</h5><p>http://www.somedomain.com</p></div>  
+              <div class="infa"><input type="button" value="VISIT LIVE SITE"></div> 
           </div>
           <div class="name_project">
               <h5>Название проекта</h5>
@@ -102,9 +139,11 @@
           </div>
       </div> 
     </div>
-    </div>
+    </section>
+  
     
-    <div class="calc">
+    <section class="calc">
+      
        <div class="calc_conteiner">
         <h3>Расчёт стоимости</h3>
         <h4>Тип сайта</h4>
@@ -134,12 +173,12 @@
         <img src="img\линия.png" alt="-----">
         <p>Сроки</p>
         <p>Стоимость</p>
+        <input type="button" value="Оставить заявку">
     </div>
-    </div>
+    </section>
     
-    <div class="statistics">
-      <div class="parallax_layer parallax_back"><img src="img/фон4.jpg" alt="Фон"></div>
-       <div class="statistics_conteiner parallax_layer parallax_base">
+    <section class="statistics">
+       <div class="statistics_conteiner ">
         <h3>НЕМНОГО СТАТИСТИКИ</h3>
         <img src="img\Черта заголовка.png" alt="-----">
         <div class="blocks">
@@ -147,11 +186,11 @@
             <img src="img\смайл.png" alt="Изображение">
             <p class="number">120</p> <p class="textic">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
         </div>
-        <div class="statistic-block" centr_thing2="1">
+        <div class="statistic-block">
             <img src="img\скобки.png" alt="Изображение">
             <p class="number">4,600</p> <p class="textic">ЧАСОВ РАБОТЫ</p>
         </div>
-        <div class="statistic-block" centr_thing2="2">
+        <div class="statistic-block">
             <img src="img\галочка.png" alt="Изображение">
             <p class="number">340</p> <p class="textic">ПРОЕКТОВ ЗАВЕРШЕНО</p>
         </div>
@@ -161,10 +200,10 @@
         </div>
         </div>
     </div>
-    </div>
+    </section>
     
-    <div class="reviews">
-       <div class="reviews_connteiner">
+    <section class="reviews">
+       <div class="reviews_conteiner">
        <div>
         <h3>ОТЗЫВЫ</h3>
         <img src="img\Черта заголовка.png" alt="-----">
@@ -172,12 +211,12 @@
        <div class="reviews_block">
         <img src="https://ru-static.z-dn.net/files/d74/33672c5690f854a278c2015ba18b08a2.jpeg" alt="Изображение" >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab totam nulla, amet sit. <br>Sint itaque facilis, ad non, nam hic.</p>
-        <p><span>Шерлок Холмс</span>, НЕ Ген. Директор ПАО "Газпром"</p>
+        <div class="sherl"><p><span>Шерлок Холмс</span>, НЕ Ген. Директор ПАО "Газпром"</p></div>
         </div>
         </div>
-    </div>
+    </section>
     
-    <div class="feedback">
+    <section class="feedback">
     <div class="feedback_conteiner">
        <div class="contacts">
             <h3>МОИ КОНТАКТЫ</h3>
@@ -188,7 +227,7 @@
             <img src="img\гео.png" alt="Изображение">
             <p>Лондон<br>Бейкер-стрит, 221Б </p>
             </div>
-            <div class="info_block" thing="">
+            <div class="info_block">
             <img src="img\конверт.png" alt="Изображение">
             <p>info@companyname.com</p>
             </div>
@@ -210,16 +249,18 @@
             </form>
         </div>
     </div>
-    </div>
+    </section>
     
-    <div class="map">
+    
+    <section class="map">
         <p>Честно, тут когда-нибудь будет карта</p>
-    </div>
+    </section>
     
-    
+    </main>
     <footer>
         <p>Copyright©2022 Алёна Игнатьева. Desining by Web</p>
     </footer>
-    </main>
+    
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
