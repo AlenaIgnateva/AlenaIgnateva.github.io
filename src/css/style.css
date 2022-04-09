@@ -20,6 +20,7 @@
 
 body{
     font-family: 'Franklin Gothic', Arial,sans-serif;
+    position: relative;
     -webkit-animation: no_skroll 3.5s ease forwards;
     -o-animation: no_skroll 3.5s ease forwards ;
     animation: no_skroll 3.5s ease forwards ;
@@ -81,7 +82,7 @@ body{
     box-shadow: 0 0 5px rgba(255,255,255,.3);
     border-radius: 50%;
 }
-span{
+.spinner span{
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -661,6 +662,9 @@ h3{
     justify-content: space-between;
 }
 
+.rasch_st{
+    margin-top: 22px;
+}
 
 .calc_conteiner span{
     color: #2c2c2c;
@@ -777,7 +781,6 @@ h3{
 }
 
 .reviews_conteiner{
-    margin-top: 70px;
     float: left;
     width: 658px;
     text-align: center;
@@ -803,6 +806,12 @@ h3{
     font-weight: bolder;
 }
 
+.indicators2{
+    height: 300px;
+}
+.carousel2_btn{
+    margin-top: 350px;
+}
 
 @media (max-width:398px){
     .reviews_conteiner{
@@ -981,7 +990,11 @@ footer p{
     animation: pulse ease 1s forwards;
 }
 
-.fixed {
+.fixed{
 position:fixed; 
+height: 100vh;
 width:100%; 
+left: 0;
+top: 0;
+overflow: hidden;
 }

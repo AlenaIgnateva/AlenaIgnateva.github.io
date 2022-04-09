@@ -90,7 +90,7 @@
                 <p>А если будет скидка 20%?</p> 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary closing" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary closing" data-bs-dismiss="modal">Закрыть</button>
                 <button type="button" class="btn btn-primary modal_btn"><a href="#calc1">Оставить заявку</a></button>
               </div>
             </div>
@@ -106,7 +106,7 @@
            <img src="img\Черта заголовка.png" alt="-----">
        </div>
         
-        <img class="bad_foto" src="img\my_bad.jpg" data-srs="img\my.png"  width="200" alt="Изображение">
+        <img class="bad_foto" src="img\my_bad.jpg" data-src="img\my.png"  width="200" alt="Изображение">
         <div class="text_about_me">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, magni, maxime. Doloremque est aliquid reprihemde vitae perferendis esse nam soluta ullam expedita, distinctio rem?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, magni, maxime. Doloremque est aliquid reprihemde vitae perferendis esse nam soluta ullam expedita, distinctio rem?</p>
@@ -226,36 +226,36 @@
         <img src="img\линия.png" alt="-----">
       
             <div class="rasch"><span>Сроки</span><span class="time num">0</span></div>
-            <div class="rasch"><span>Стоимость</span><div><span class="sale num"></span><span class="money num">0</span></div></div>
+            <div class="rasch"><span>Стоимость</span><div class="rasch_st"><span class="sale num"></span><span class="money num">0</span></div></div>
 
         <input class="calculation" type="button" value="Оставить заявку">
         
     </div>
     </section>
     
-    <div class="statistics" >
-       <div class="statistics_conteiner ">
-        <h3>НЕМНОГО СТАТИСТИКИ</h3>
-        <img src="img\Черта заголовка.png" alt="-----">
+    <div class="statistics benefits" >
+       <div class="statistics_conteiner benefits__inner">
+            <h3 class="benefits__header">НЕМНОГО СТАТИСТИКИ</h3>
+            <img src="img\Черта заголовка.png" alt="-----">
         <div class="blocks">
-        <div class="statistic-block">
+        <div class="statistic-block benefits__element">
             <img src="img\смайл.png" alt="Изображение">
-            <p class="number">120</p> <p class="textic">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
+            <p class="number benefits__number">120</p> <p class="textic benefits__title">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
         </div>
-        <div class="statistic-block">
+        <div class="statistic-block benefits__element">
             <img src="img\скобки.png" alt="Изображение">
-            <p class="number">4,600</p> <p class="textic">ЧАСОВ РАБОТЫ</p>
+            <p class="number benefits__number">4,600</p> <p class="textic benefits__title">ЧАСОВ РАБОТЫ</p>
         </div>
-        <div class="statistic-block">
+        <div class="statistic-block benefits__element">
             <img src="img\галочка.png" alt="Изображение">
-            <p class="number">340</p> <p class="textic">ПРОЕКТОВ ЗАВЕРШЕНО</p>
+            <p class="number benefits__number">340</p> <p class="textic benefits__title">ПРОЕКТОВ ЗАВЕРШЕНО</p>
         </div>
-        <div class="statistic-block">
+        <div class="statistic-block benefits__element">
            <img src="img\кубок.png" alt="Изображение">
-            <p class="number">23</p> <p class="textic">НАГРАД ПОЛУЧЕНО</p>
+            <p class="number benefits__number">23</p> <p class="textic benefits__title">НАГРАД ПОЛУЧЕНО</p>
         </div>
         </div>
-    </div>
+        </div>
     </div>
     
     <section class="reviews" id="reviews0">
@@ -266,11 +266,13 @@
        </div>
        
        
-       <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+       <div id="carousel2" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators indicators2">
+       <div class="carousel2_btn">
+    <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -284,22 +286,22 @@
       <div class="reviews_block">
         <img src="https://i.pinimg.com/originals/bd/f7/e7/bdf7e79eb7fe16e452ceeea7d2bef2ab.jpg" alt="Изображение" >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab totam nulla, amet sit. <br>Sint itaque facilis, ad non, nam hic.</p>
-        <div class="sherl"><p><span>Шерлок Холмс</span>, НЕ Ген. Директор ПАО "Газпром"</p></div>
+        <div class="sherl"><p><span>Гарри Поттер</span>, НЕ Ген. Директор ПАО "Газпром"</p></div>
         </div>
     </div>
     <div class="carousel-item">
       <div class="reviews_block">
         <img src="https://e-w-e.ru/wp-content/uploads/2020/08/befunky-collage-31.jpg" alt="Изображение" >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab totam nulla, amet sit. <br>Sint itaque facilis, ad non, nam hic.</p>
-        <div class="sherl"><p><span>Шерлок Холмс</span>, НЕ Ген. Директор ПАО "Газпром"</p></div>
+        <div class="sherl"><p><span>Леонардо Ди Каприо</span>, НЕ Ген. Директор ПАО "Газпром"</p></div>
         </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"  data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Предыдущий</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel2"  data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </button>
@@ -356,6 +358,8 @@
     
 
 <script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.spincrement.min.js"></script>
+<script src="js/custom.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/MyScript.js"></script>

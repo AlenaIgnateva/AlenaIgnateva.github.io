@@ -1,8 +1,8 @@
 "use strict" ;
 
 
-                    //Всё, что после загрузки страницы//
 
+                    //Всё, что после загрузки страницы//
 $(document).ready(function(){   
   
                         /*Активный пункт навигации*/
@@ -19,29 +19,19 @@ $(window).scroll(() => {
             
             let idAct = $(el).attr("id");
             
-//Без переменной в ссылке РАБОТАЕТ:
-            if(idAct == 'about_me0'){$('a[href = "#about_me0"]').addClass('active')};
-            if(idAct == 'my_skills0'){$('a[href = "#my_skills0"]').addClass('active')};
-            if(idAct == 'case1'){$('a[href = "#case1"]').addClass('active')};
-            if(idAct == 'calc1'){ $('a[href = "#calc1"]').addClass('active')};
-            if(idAct == 'reviews0'){$('a[href = "#reviews0"]').addClass('active')};
-            if(idAct == 'feedback0'){$('a[href = "#feedback0"]').addClass('active')};
-                                    
-//С ней не работает 
-//            hrefAct = '#' + idAct;
-//      ни так   $('a[href = hrefAct]').addClass('active');
-//      ни так   $('a[href = `${hrefAct}`]').addClass('active');
+
+            $('a[href = "#' + idAct +'"]').addClass('active');
         }
     });
 });
     
                     /*Анимация цифр статистики*/
-let observer1 = new IntersectionObserver(onEntry, {threshold: [0.7]});
-let elem_anim = $('.number');
-elem_anim.each((i,el) =>{
-    observer1.observe(el);
-});
-       
+//let observer1 = new IntersectionObserver(onEntry, {threshold: [0.7]});
+//let elem_anim = $('.number');
+//elem_anim.each((i,el) =>{
+//    observer1.observe(el);
+//});
+//       
 
                         /*Калькулятор*/
 var sale = 1;
@@ -64,7 +54,8 @@ $('.calculation').click(function(){
         $('.money').text("    " + sumik(val,0) + '  руб.');
         $('.money').attr('style','text-decoration: line-through;');
     } else{
-        $('.num').attr('style','font-size : 20px; background: #d17700');
+        $('.num').attr('style','font-size : 20px;');
+        $('.money').attr('style','font-size : 20px; background: #d17700');
         $('.money').text(itog_money + '  руб.');
     }
     $('.time').text(srok + '  дн.');
@@ -72,19 +63,24 @@ $('.calculation').click(function(){
     
 });
                         /*Модальное окно*/
-let timerId = setTimeout(modal_vis, 1000);
+let timerId = setTimeout(modal_vis, 5000);
 
 $('.closing').click(function(){
     $('#exampleModal').removeClass('show');
     $('#exampleModal').attr('style','display : none');
-    $("body").removeClass("fixed");
+    Yes_Scroll();
+    
 });
     
 $('.modal_btn').click(function(){
     sale = 0.8;
     $('#exampleModal').removeClass('show');
     $('#exampleModal').attr('style','display : none');
+    
+    body.style.top='auto';
     $("body").removeClass("fixed");
+    $('html, body').animate({scrollTop: $('#calc1').offset().top});
+    
 });
                     /*Прогрузка фото*/
 let observer2 = new IntersectionObserver(GoodFoto, {threshold: [0.6]});
@@ -112,12 +108,41 @@ function sumik(arrr,index){
         };
         return variable;
     };
-    
+
+
+
 function modal_vis(){
+    
     $('#exampleModal').addClass('show');
     $('#exampleModal').attr({'aria-modal':"true",role:"dialog",style:"display: block; padding-right: 21px;"});
-    $("body").addClass("fixed");
+    No_Scroll()
 };
+
+
+const body = document.body;
+
+function No_Scroll(){
+    let pagePosition = window.scrollY;
+    console.log(pagePosition);
+    $("body").addClass("fixed");
+    body.dataset.position = pagePosition;
+    body.style.top = -pagePosition +'px';
+}
+
+function Yes_Scroll(){
+    let pagePosition = $("body").attr('data-position');
+    console.log(pagePosition);
+    body.style.top='auto';
+    $("body").removeClass("fixed");
+    
+        //   ПРИНУДИТЕЛЬНЫЙ СКРОЛЛ
+   window.scroll({top:pagePosition, left:0})
+//    window.scroll(0, pagePosition)
+//   $('html, body').animate({scrollTop: pagePosition});
+    
+    body.removeAttribute('data-position');
+}
+
 
 function GoodFoto (entry){
     entry.forEach(change =>{
